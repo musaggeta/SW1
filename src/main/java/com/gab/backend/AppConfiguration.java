@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 
 @Configuration
-@MapperScan(value="\"com.gab.backend\"", sqlSessionFactoryRef = "sqlSessionFactory")
+@MapperScan(value="com.gab.backend", sqlSessionFactoryRef = "sqlSessionFactory")
 public class AppConfiguration {
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception{
