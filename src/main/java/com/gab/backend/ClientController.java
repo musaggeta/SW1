@@ -44,6 +44,7 @@ public class ClientController {
             response.put("message", "El cliente no tiene primer nombre");
             return new ResponseEntity<Map>(response, HttpStatus.BAD_REQUEST);
         }
+
         clientMapper.create(clientDto);
         return new ResponseEntity<>(clientDto, HttpStatus.OK);
     }
