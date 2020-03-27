@@ -5,23 +5,23 @@ import java.util.Objects;
 
 /**
  * Representa a la tabla client
- * DTO: Data transfer Object
+ * DTO: Data transfer objecto
+ * POJO: Plain Old Java Object
  */
 public class ClientDto {
+
     private Integer clientId;
     private String firstName;
     private String lastName;
-    private Date birthdate;
+    private Date birthDate;
     private Boolean status;
     private Integer txId;
-    private Integer txDate;
+    private Date txDate;
     private Integer txUserId;
     private String txHost;
 
-
     public ClientDto() {
     }
-
 
     @Override
     public String toString() {
@@ -29,13 +29,85 @@ public class ClientDto {
                 "clientId=" + clientId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", birthdate=" + birthdate +
+                ", birthDate=" + birthDate +
                 ", status=" + status +
                 ", txId=" + txId +
                 ", txDate=" + txDate +
                 ", txUserId=" + txUserId +
                 ", txHost='" + txHost + '\'' +
                 '}';
+    }
+
+    public Integer getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(Integer clientId) {
+        this.clientId = clientId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    public Integer getTxId() {
+        return txId;
+    }
+
+    public void setTxId(Integer txId) {
+        this.txId = txId;
+    }
+
+    public Date getTxDate() {
+        return txDate;
+    }
+
+    public void setTxDate(Date txDate) {
+        this.txDate = txDate;
+    }
+
+    public Integer getTxUserId() {
+        return txUserId;
+    }
+
+    public void setTxUserId(Integer txUserId) {
+        this.txUserId = txUserId;
+    }
+
+    public String getTxHost() {
+        return txHost;
+    }
+
+    public void setTxHost(String txHost) {
+        this.txHost = txHost;
     }
 
     @Override
@@ -51,75 +123,4 @@ public class ClientDto {
         return Objects.hash(clientId);
     }
 
-    public Integer getClientId() {
-        return clientId;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public Date getBirthdate() {
-        return birthdate;
-    }
-
-    public Boolean getStatus() {
-        return status;
-    }
-
-    public Integer getTxId() {
-        return txId;
-    }
-
-    public Integer getTxDate() {
-        return txDate;
-    }
-
-    public Integer getTxUserId() {
-        return txUserId;
-    }
-
-    public String getTxHost() {
-        return txHost;
-    }
-
-    public void setClientId(Integer clientId) {
-        this.clientId = clientId;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
-    }
-
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
-
-    public void setTxId(Integer txId) {
-        this.txId = txId;
-    }
-
-    public void setTxDate(Integer txDate) {
-        this.txDate = txDate;
-    }
-
-    public void setTxUserId(Integer txUserId) {
-        this.txUserId = txUserId;
-    }
-
-    public void setTxHost(String txHost) {
-        this.txHost = txHost;
-    }
 }
